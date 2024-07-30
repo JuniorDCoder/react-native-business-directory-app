@@ -15,7 +15,7 @@ export default function home() {
     setTimeout(() => {
       setRefreshing(false);
       // Add any additional logic to refresh the content here
-    }, 1000);
+    }, 2000);
   }, []);
 
   return (
@@ -26,7 +26,7 @@ export default function home() {
       }
     >
       {/* Header */}
-      {refreshing ? <GradientLoader height={100} /> : <Header />}
+      <Header />
 
       {/* Slider */}
       {refreshing ? <GradientLoader height={200} /> : <Slider />}
