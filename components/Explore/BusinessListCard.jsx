@@ -22,7 +22,7 @@ export default function BusinessListCard({business}) {
             borderTopLeftRadius: 15,
             borderTopRightRadius: 15,
         }}
-         source={require('../../assets/images/login.jpeg')} />
+         source={{uri: business?.imageUrl}} />
       <View style={{
         padding: 10,
       }}>

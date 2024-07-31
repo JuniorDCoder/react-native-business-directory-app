@@ -15,7 +15,7 @@ export default function PopularBusinessCard({business}) {
     }}
     onPress={() => router.push(`/businessdetail/${business.id}`)}
     >
-      <Image source={require('../../assets/images/login.jpeg')} 
+      <Image source={{uri: business?.imageUrl}} 
       style={{
         width: 200,
         height: 130,
