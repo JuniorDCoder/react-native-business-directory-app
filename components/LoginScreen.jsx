@@ -29,7 +29,7 @@ export default function LoginScreen() {
     return (
         <ScrollView 
             showsVerticalScrollIndicator={false}
-            style={{ marginTop: 120 }}
+            style={{ marginTop: 80 }}
             contentContainerStyle={{
                 display: 'flex',
                 alignItems: 'center'

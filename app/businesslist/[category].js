@@ -18,11 +18,14 @@ export default function BusinessListByCategory() {
         navigation.setOptions({
             headerShown: true,
             headerTitle: category,
-            headerLeft: () => (
-                <TouchableOpacity style={{ padding: 10, fontFamily: 'outfit-bold' }} onPress={() => navigation.goBack()}>
-                    <Icon name="arrow-back" size={24} color="black" />
-                </TouchableOpacity>
-            ),
+            headerStyle: {
+                backgroundColor: Colors.PRIMARY,
+              },
+              headerTintColor: '#fff', // Set the back icon color to white
+              headerTitleStyle: {
+                color: '#fff' // Set the header text color to white
+            },
+            
         });
     }, [navigation, category]);
 
