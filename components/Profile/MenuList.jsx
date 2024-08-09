@@ -1,7 +1,7 @@
 import { View, Text, FlatList, Image, TouchableOpacity, Share } from 'react-native'
 import React from 'react'
 import { Colors } from '../../constants/Colors'
-import { useRouter } from 'expo-router'
+import { useRouter, useNavigation } from 'expo-router'
 import { useAuth } from '@clerk/clerk-expo'
 
 export default function MenuList() {
@@ -11,13 +11,13 @@ export default function MenuList() {
             id: 1,
             name: 'Add Business',
             icon: require('../../assets/images/icons/add.gif'),
-            path: '/business/add-business'
+            path: 'business/add-business'
         },
         {
             id: 2,
             name: 'My Business',
             icon: require('../../assets/images/icons/info.png'),
-            path: '/business/my-business'
+            path: 'business/my-business'
         },
         {
             id: 3,
@@ -34,7 +34,7 @@ export default function MenuList() {
     ]
     const { signOut } = useAuth()
 
-    const router = useRouter()
+    const router = useNavigation()
 
     const onMenuClick = (item) => {
         if(item.path === 'logout') {
@@ -84,12 +84,12 @@ export default function MenuList() {
             </TouchableOpacity>                    
         )}
       />
-      <Text style={{
-        fontFamily: 'outfit',
-        textAlign: 'center',
-        marginTop: 50,
-        color: Colors.GRAY
-      }}>Developed by JuniorDCoder @ 2024</Text>
+        <Text style={{
+            fontFamily: 'outfit',
+            textAlign: 'center',
+            marginTop: 50,
+            color: Colors.GRAY
+        }}>Developed by JuniorDCoder @ {new Date().getFullYear()}</Text>
     </View>
   )
 }

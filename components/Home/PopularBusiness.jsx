@@ -24,7 +24,6 @@ export default function PopularBusiness() {
         const querySnapshot = await getDocs(q)
 
         querySnapshot.forEach((doc) => {
-            console.log(doc.id, '=>', doc.data())
             setBusinessList(prev=>[...prev, {id: doc.id, ...doc.data()}])
             setLoading(false)
         })
