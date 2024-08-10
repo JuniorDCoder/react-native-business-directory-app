@@ -71,5 +71,7 @@ export const usePushNotifications = (): PushNotificationState => {
         }
     }, [])
 
+    
+
     return { notification, expoPushToken }
 }
