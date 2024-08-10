@@ -8,6 +8,7 @@ import { db, storage } from '../../config/FirebaseConfig'
 import { collection, doc, getDocs, query, setDoc } from 'firebase/firestore'
 import { ref, uploadBytes, blob, getDownloadURL } from 'firebase/storage'
 import { useUser } from '@clerk/clerk-expo'
+import { usePushNotifications } from '../../hooks/usePushNotifications'
 
 export default function AddBusiness() {
 
@@ -55,6 +56,10 @@ export default function AddBusiness() {
     })
   }
 
+  const  { expoPushToken, notification } = usePushNotifications()
+  const data = JSON.stringify(notification, undefined,2)
+
+
   const onAddNewBusiness = async () => {
     setLoading(true)
     const fileName = Date.now().toString()+".jpg"
@@ -97,6 +102,7 @@ export default function AddBusiness() {
     });
 
     setImage(result?.assets[0].uri)
+    console.log(expoPushToken, data)
   }
   return (
     <ScrollView

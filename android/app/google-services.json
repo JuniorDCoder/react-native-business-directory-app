@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "615138434091",
+    "project_id": "expo-push-notifications-44242",
+    "storage_bucket": "expo-push-notifications-44242.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615138434091:android:fbe56cfd31fc4657e0de6e",
+        "android_client_info": {
+          "package_name": "com.juniordcoder.businessdirectory"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3bBqayQLVpw0-IDJ5v-OwjjDDy1ofvSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
